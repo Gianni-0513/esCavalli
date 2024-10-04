@@ -1,10 +1,14 @@
 package com.example;
 
+import java.util.ArrayList;
+
 public class Cavallo extends Thread{
     private String numCavallo;
+    private ArrayList<String> classifica;
 
-    public Cavallo(String i){
+    public Cavallo(String i, ArrayList<String> classifica){
         numCavallo = i;
+        this.classifica = classifica;
     }
 
     public void run(){
@@ -17,6 +21,7 @@ public class Cavallo extends Thread{
             }
             
         }
+        classifica.add(numCavallo);
     }
 
     public String getNumeroCavallo(){return numCavallo;}

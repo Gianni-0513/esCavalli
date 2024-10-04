@@ -19,7 +19,7 @@ public class Sfida {
 
     public void inizioSfida() {
         for(int i=0; i<20; i++){
-            aggiungiCavallo(new Cavallo("Cavallo" + i));
+            aggiungiCavallo(new Cavallo("Cavallo" + i, classifica));
         }
         for (Cavallo c : cavalli) {
             c.start();
